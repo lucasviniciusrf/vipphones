@@ -1,0 +1,23 @@
+/* A single proportional viewport preserves the entire supplied brand mark. */
+.brand{width:250px;height:auto;aspect-ratio:680/190;background:transparent;color:var(--blue);overflow:visible}
+.brand svg{display:block;width:100%;height:100%;overflow:hidden}
+.brand-compact{width:235px;height:auto}
+.about-mark .brand{width:min(82%,330px);height:auto;transform:none;color:#fff}
+.about-mark>span{display:none}
+
+.site-header{background:linear-gradient(180deg,#edf2fc 0%,#f7f9fe 52%,#fff 100%)}
+.main-nav{color:var(--ink)}
+.main-nav>a:not(.header-cta):hover{color:var(--blue)}
+.header-cta{color:#fff;background:var(--blue);transition:background .2s}
+.header-cta:hover{background:var(--blue-dark)}
+.menu-toggle span{background:var(--blue)}
+.site-footer{background:linear-gradient(180deg,#fff 0%,#f7f9fe 36%,#eaf0fc 100%);color:var(--ink)}
+.footer-inner{padding-top:54px}
+.footer-inner span,.footer-bottom{color:#596b8c}
+.footer-links{color:var(--blue)}
+.footer-bottom{border-top:1px solid #dce4f1}
+.footer-links a:hover,.footer-bottom a:hover{color:var(--blue-dark);text-decoration:underline}
+
+@media(max-width:1120px){.brand{width:220px;height:auto}}
+@media(max-width:820px){.main-nav{background:#fff;box-shadow:0 15px 25px rgba(20,45,95,.08)}.main-nav .header-cta{color:#fff}.brand{width:205px;height:auto}}
+@media(max-width:560px){.brand{width:min(205px,65vw);height:auto}.footer-inner{padding-top:38px}.about-mark .brand{width:min(82%,330px)}}

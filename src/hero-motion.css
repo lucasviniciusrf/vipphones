@@ -1,0 +1,21 @@
+.hero{background:#fff}
+.hero-art{background:transparent}
+.hero-3d-frame{background:transparent;box-shadow:none;overflow:visible}
+.hero-opening{position:relative;width:100%;height:100%;isolation:isolate}
+.hero-opening::after{content:'';position:absolute;bottom:10%;left:24%;width:52%;height:24px;background:rgba(28,52,104,.16);filter:blur(22px);border-radius:50%;z-index:-1;transform:rotate(-12deg)}
+.hero-opening-canvas{position:absolute;inset:0;touch-action:pan-y}
+.hero-opening-canvas canvas{display:block;opacity:0;transition:opacity .45s;width:100%;height:100%}
+.opening-ready .hero-opening-canvas canvas{opacity:1}
+.hero-opening-placeholder{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:transparent;border-radius:18px;transition:opacity .45s;pointer-events:none}
+.hero-opening-placeholder,.hero-loading-image{filter:brightness(1.03);mix-blend-mode:multiply}
+.opening-ready .hero-opening-placeholder{opacity:0}
+.opening-fallback .hero-opening-canvas{display:none}
+.hero-scene-tag{position:absolute;top:22px;left:20px;pointer-events:none;color:#7b91b8;font-size:9px;letter-spacing:.17em;font-weight:600}
+.button{justify-content:center;gap:0}
+.main-nav .header-cta{justify-content:center}
+.trade-brand{width:260px;height:64px;overflow:hidden}
+.trade-brand img{position:absolute;display:block;width:260px;max-width:none;height:261px;left:0;top:-88px}
+@media(max-width:820px){.hero-inner{display:grid;grid-template-columns:1fr}.hero-copy{display:contents}.hero-copy>.eyebrow{grid-row:1;margin:32px 0 16px}.hero-copy>h1{grid-row:2;margin-bottom:22px}.hero-art{grid-row:3}.hero-lead{grid-row:4;margin:24px 0}.hero-actions{grid-row:5}.hero-caption{grid-row:6;margin:22px 0 32px}.hero-3d-frame{height:380px}}
+@media(max-width:560px){.hero-scene-tag{font-size:8px;top:14px;left:14px}.hero-3d-frame{height:340px}}
+@media(max-width:820px) and (max-height:650px){.hero-3d-frame{height:320px}.hero-copy>.eyebrow{margin-top:24px}.hero-copy>h1{font-size:40px;margin-bottom:18px}}
+@media(prefers-reduced-motion:reduce){.hero-opening-placeholder,.hero-opening-canvas canvas{transition:none}}
